@@ -7,9 +7,11 @@ import { ProjectListComponent } from './project-list/project-list.component';
 import { RouterModule } from '@angular/router';
 
 import {ButtonModule} from 'primeng/button';
+import { AutoCompliteComponentComponent } from './components/auto-complite-component/auto-complite-component.component';
+import { LoginComponentComponent } from './components/login-component/login-component.component';
 
 @NgModule({
-  declarations: [AppComponent, ProjectListComponent],
+  declarations: [AppComponent, ProjectListComponent, AutoCompliteComponentComponent, LoginComponentComponent],
   imports: [BrowserModule, AppRoutingModule, RouterModule, ButtonModule],
   providers: [],
   bootstrap: [AppComponent],
