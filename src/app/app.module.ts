@@ -7,10 +7,12 @@ import { ProjectListComponent } from './project-list/project-list.component';
 import { RouterModule } from '@angular/router';
 
 import {ButtonModule} from 'primeng/button';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, ProjectListComponent],
-  imports: [BrowserModule, AppRoutingModule, RouterModule, ButtonModule],
+  declarations: [AppComponent, ProjectListComponent, LoginComponent],
+  imports: [BrowserModule, AppRoutingModule, RouterModule, ButtonModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
