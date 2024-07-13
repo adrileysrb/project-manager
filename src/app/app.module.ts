@@ -10,10 +10,11 @@ import {ButtonModule} from 'primeng/button';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductService } from './services/product.service';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [AppComponent, ProjectListComponent, LoginComponent],
-  imports: [BrowserModule, AppRoutingModule, RouterModule, ButtonModule, FormsModule, TableModule,ReactiveFormsModule ],
+  imports: [BrowserModule, AppRoutingModule, RouterModule, ButtonModule, FormsModule, TableModule, InputTextModule, ReactiveFormsModule ],
   providers: [ProductService],
   bootstrap: [AppComponent],
 })

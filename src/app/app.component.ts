@@ -20,4 +20,9 @@ export class AppComponent {
     console.log("lista");
     this.router.navigate(['/lista']);
   }
+
+  clickTabela() {
+    console.log("tabela");
+    this.router.navigate(['/tabela']);
+  }
 }

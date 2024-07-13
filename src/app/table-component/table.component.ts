@@ -1,23 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { Product } from '../domain/product';
-import { TableModule } from 'primeng/table';
-import { CommonModule } from '@angular/common';
-import { InputTextModule } from 'primeng/inputtext';
-import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'table-filter-sort-edit-demo',
-    templateUrl: 'table.component.html',
-    standalone: true,
-    imports: [TableModule, InputTextModule, CommonModule, FormsModule],
-    providers: [ProductService],
-    styles: [
-        `:host ::ng-deep .p-cell-editing {
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
-        }`
-    ],
+    templateUrl: './table.component.html',
+    styleUrls: ['./table.component.css']
 })
 export class TableFilterSortEditDemo implements OnInit {
     products!: Product[];
