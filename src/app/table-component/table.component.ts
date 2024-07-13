@@ -4,12 +4,13 @@ import { Product } from '../domain/product';
 import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
 import { InputTextModule } from 'primeng/inputtext';
+import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'table-filter-sort-edit-demo',
     templateUrl: 'table.component.html',
     standalone: true,
-    imports: [TableModule, InputTextModule, CommonModule],
+    imports: [TableModule, InputTextModule, CommonModule, FormsModule],
     providers: [ProductService],
     styles: [
         `:host ::ng-deep .p-cell-editing {
@@ -29,8 +30,8 @@ export class TableFilterSortEditDemo implements OnInit {
         });
     }
 
-    onEdit(event: { target: { value: any; }; stopPropagation: () => void; }) {
-        if (!this.isPositiveInteger(event.target.value)) {
+    onEdit(event: InputEvent) {
+        if (!this.isPositiveInteger((event!.target! as Event).value)) {
             event.stopPropagation();
         }
     }
