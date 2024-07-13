@@ -15,7 +15,7 @@ import { ProductService } from './services/product.service';
 
 @NgModule({
   declarations: [AppComponent, ProjectListComponent, LoginComponent],
-  imports: [BrowserModule, AppRoutingModule, RouterModule, ButtonModule, FormsModule, TableModule],
+  imports: [BrowserModule, AppRoutingModule, RouterModule, ButtonModule, FormsModule, TableModule, ],
   providers: [ProductService],
   bootstrap: [AppComponent],
 })
