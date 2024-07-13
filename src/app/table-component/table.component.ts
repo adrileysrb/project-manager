@@ -30,8 +30,8 @@ export class TableFilterSortEditDemo implements OnInit {
         });
     }
 
-    onEdit(event: InputEvent) {
-        if (!this.isPositiveInteger((event!.target! as Event).value)) {
+    onEdit(event:  Event): void {
+        if (!this.isPositiveInteger(event.target?.addEventListener)) {
             event.stopPropagation();
         }
     }
