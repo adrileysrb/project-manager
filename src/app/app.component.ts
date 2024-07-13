@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'project-manager';
+
+  constructor(private router: Router) {}
+
+  clicklogin() {
+    console.log("login");
+    this.router.navigate(['/login']);
+  }
+
+  clicklista() {
+    console.log("lista");
+    this.router.navigate(['/lista']);
+  }
 }
